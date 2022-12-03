@@ -1,0 +1,31 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("made by dev", "Synapse")
+
+-- Main
+local Main = Window:NewTab("hax")
+
+local MainSection = Main:NewSection("hax")
+
+--button
+MainSection:NewToggle("autofarm", "what", function(state)
+    if state then
+        
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local finish = CFrame.new(150313, 0.16, -835)
+        local location = CFrame.new(233, 56, -838)
+
+
+
+while wait() do 
+        wait(0.3)
+        pl.CFrame = location
+        wait(0.3)
+        pl.CFrame = finish
+end 
+
+    else
+        print("Toggle Off")
+
+    end
+end)
+
