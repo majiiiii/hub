@@ -1,1 +1,25 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("jp/infjump script", "Synapse")
 
+local Main = Window:NewTab("hax")
+
+local MainSection = Main:NewSection("hax")
+
+local bypassMod = require(game:GetService("ReplicatedStorage").ClientMain.Controllers.ProtectionController)
+
+
+MainSection:NewButton("bypass", "what", function()
+    bypassMod.CreateShield = function() return end
+end)    
+
+        
+MainSection:NewButton("infiniteyield", "what", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)    
+
+ 
+
+   
+        
+
+   
